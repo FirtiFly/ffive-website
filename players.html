@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Состав команды - FFIVE Esports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Логотип FFIVE" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <a href="index.html#about" class="nav__link">О нас</a>
+                    <a href="players.html" class="nav__link nav__link--active">Состав</a>
+                    <a href="index.html#schedule" class="nav__link">Расписание</a>
+                    <a href="news.html" class="nav__link">Новости</a>
+                    <a href="index.html#media" class="nav__link">Медиа</a>
+                    <a href="index.html#shop" class="nav__link">Магазин</a>
+                    <a href="index.html#contact" class="nav__link">Контакты</a>
+                </nav>
+                <a href="https://ffive-store.ru" target="_blank" class="btn btn--accent">Мерч</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="players-page">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="index.html">Главная</a> / <span>Состав команды</span>
+            </div>
+        </div>
+
+        <!-- Заголовок страницы -->
+        <section class="page-header section">
+            <div class="container">
+                <h1 class="page-title">Наши игроки</h1>
+                <p class="page-subtitle">Профессиональные киберспортсмены, представляющие FFIVE в CS2</p>
+            </div>
+        </section>
+
+        <!-- Фильтры по ролям -->
+        <section class="players-filters section section--dark">
+            <div class="container">
+                <div class="filters__grid">
+                    <div class="filters-info">
+                        <h3>Всего игроков: <span id="players-count">6</span></h3>
+                    </div>
+                    <div class="role-filters">
+                        <button class="filter-btn active" data-role="all">Все</button>
+                        <button class="filter-btn" data-role="igl">IGL</button>
+                        <button class="filter-btn" data-role="awper">AWPer</button>
+                        <button class="filter-btn" data-role="rifler">Rifler</button>
+                        <button class="filter-btn" data-role="support">Support</button>
+                        <button class="filter-btn" data-role="coach">Тренер</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основной состав -->
+        <section class="main-roster section">
+            <div class="container">
+                <h2 class="section__title">Основной состав</h2>
+                <div class="players-grid" id="players-grid">
+                    <!-- Игрок 1 -->
+                    <div class="player-profile-card" data-role="igl" data-player-id="1">
+                        <div class="player-card__header">
+                            <img src="images/players/player1.jpg" alt="PlayerNick1" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--captain">Капитан</span>
+                                <span class="badge badge--level">Уровень 10</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">PlayerNick1</h3>
+                            <p class="player-card__name">Иван Петров</p>
+                            <p class="player-card__role">In-Game Leader</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">1.45</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">87%</span>
+                                    <span class="stat-label">Win Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1.2k</span>
+                                    <span class="stat-label">ELO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-stats-btn" data-player-id="1">Статистика</button>
+                            <a href="https://faceit.com/ru/players/PlayerNick1" target="_blank" class="btn btn--outline">Faceit</a>
+                        </div>
+                    </div>
+
+                    <!-- Игрок 2 -->
+                    <div class="player-profile-card" data-role="awper" data-player-id="2">
+                        <div class="player-card__header">
+                            <img src="images/players/player2.jpg" alt="PlayerNick2" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--level">Уровень 10</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">PlayerNick2</h3>
+                            <p class="player-card__name">Петр Сидоров</p>
+                            <p class="player-card__role">Main AWPer</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">1.65</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">82%</span>
+                                    <span class="stat-label">Win Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1.3k</span>
+                                    <span class="stat-label">ELO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-stats-btn" data-player-id="2">Статистика</button>
+                            <a href="https://faceit.com/ru/players/PlayerNick2" target="_blank" class="btn btn--outline">Faceit</a>
+                        </div>
+                    </div>
+
+                    <!-- Добавьте остальных игроков по аналогии -->
+                    <!-- Игрок 3: Rifler -->
+                     <!-- Игрок 3 -->
+                    <div class="player-profile-card" data-role="rifler" data-player-id="3">
+                        <div class="player-card__header">
+                            <img src="images/players/player3.jpg" alt="PlayerNick3" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--level">Уровень 10</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">PlayerNick2</h3>
+                            <p class="player-card__name">Петр Сидоров</p>
+                            <p class="player-card__role">rifler</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">1.65</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">82%</span>
+                                    <span class="stat-label">Win Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1.3k</span>
+                                    <span class="stat-label">ELO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-stats-btn" data-player-id="3">Статистика</button>
+                            <a href="https://faceit.com/ru/players/PlayerNick3" target="_blank" class="btn btn--outline">Faceit</a>
+                        </div>
+                    </div>
+                    <!-- Игрок 4: Support -->
+                     <!-- Игрок 4 -->
+                    <div class="player-profile-card" data-role="rifler" data-player-id="4">
+                        <div class="player-card__header">
+                            <img src="images/players/player4.jpg" alt="PlayerNick4" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--level">Уровень 10</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">PlayerNick2</h3>
+                            <p class="player-card__name">Петр Сидоров</p>
+                            <p class="player-card__role">rifler</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">1.65</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">82%</span>
+                                    <span class="stat-label">Win Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1.3k</span>
+                                    <span class="stat-label">ELO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-stats-btn" data-player-id="4">Статистика</button>
+                            <a href="https://faceit.com/ru/players/PlayerNick2" target="_blank" class="btn btn--outline">Faceit</a>
+                        </div>
+                    </div>
+                    <!-- Игрок 5: Rifler -->
+                     <!-- Игрок 5 -->
+                    <div class="player-profile-card" data-role="support" data-player-id="5">
+                        <div class="player-card__header">
+                            <img src="images/players/player5.jpg" alt="PlayerNick5" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--level">Уровень 10</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">PlayerNick2</h3>
+                            <p class="player-card__name">Петр Сидоров</p>
+                            <p class="player-card__role">support</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">1.65</span>
+                                    <span class="stat-label">K/D</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">82%</span>
+                                    <span class="stat-label">Win Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1.3k</span>
+                                    <span class="stat-label">ELO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-stats-btn" data-player-id="5">Статистика</button>
+                            <a href="https://faceit.com/ru/players/PlayerNick2" target="_blank" class="btn btn--outline">Faceit</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Тренер -->
+                    <div class="player-profile-card" data-role="coach" data-player-id="6">
+                        <div class="player-card__header">
+                            <img src="images/players/player6.jpg" alt="CoachName" class="player-card__avatar">
+                            <div class="player-card__badges">
+                                <span class="badge badge--coach">Тренер</span>
+                            </div>
+                        </div>
+                        <div class="player-card__info">
+                            <h3 class="player-card__nickname">CoachNick</h3>
+                            <p class="player-card__name">Алексей Тренеров</p>
+                            <p class="player-card__role">Главный тренер</p>
+                            <div class="player-card__stats">
+                                <div class="stat">
+                                    <span class="stat-value">5+</span>
+                                    <span class="stat-label">Лет опыта</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">15+</span>
+                                    <span class="stat-label">Турниров</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-card__actions">
+                            <button class="btn btn--small view-profile-btn">Профиль</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика команды -->
+        <section class="team-stats section section--dark">
+            <div class="container">
+                <h2 class="section__title">Статистика команды</h2>
+                <div class="stats-cards">
+                    <div class="stats-card">
+                        <div class="stats-card__icon">🏆</div>
+                        <div class="stats-card__value">12</div>
+                        <div class="stats-card__label">Выигранных турниров</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card__icon">⚔️</div>
+                        <div class="stats-card__value">245</div>
+                        <div class="stats-card__label">Сыгранных матчей</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card__icon">🎯</div>
+                        <div class="stats-card__value">1.38</div>
+                        <div class="stats-card__label">Средний K/D</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card__icon">📈</div>
+                        <div class="stats-card__value">78%</div>
+                        <div class="stats-card__label">Win Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Академия (молодежный состав) -->
+        <section class="academy section">
+            <div class="container">
+                <h2 class="section__title">Академия FFIVE</h2>
+                <p class="section-subtitle">Молодые таланты, которые готовятся к переходу в основной состав</p>
+                
+                <div class="academy-grid">
+                    <!-- Игрок академии 1 -->
+                    <div class="academy-player">
+                        <img src="images/players/academy1.jpg" alt="AcademyPlayer1" class="academy-player__avatar">
+                        <div class="academy-player__info">
+                            <h4>AcademyNick1</h4>
+                            <p>Начинающий rifler</p>
+                            <span class="academy-player__level">Уровень 8</span>
+                        </div>
+                    </div>
+
+                    <!-- Игрок академии 2 -->
+                    <div class="academy-player">
+                        <img src="images/players/academy2.jpg" alt="AcademyPlayer2" class="academy-player__avatar">
+                        <div class="academy-player__info">
+                            <h4>AcademyNick2</h4>
+                            <p>Перспективный AWPer</p>
+                            <span class="academy-player__level">Уровень 9</span>
+                        </div>
+                    </div>
+
+                    <!-- Добавьте больше игроков академии -->
+                </div>
+
+                <div class="academy-cta">
+                    <p>Хочешь попасть в нашу академию?</p>
+                    <a href="#tryout" class="btn btn--accent">Подать заявку</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма подачи заявки -->
+        <section id="tryout" class="tryout-section section section--dark">
+            <div class="container">
+                <h2 class="section__title">Попробуй силы</h2>
+                <p class="section-subtitle">Заполни форму для участия в отборе</p>
+                
+                <form class="tryout-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nickname">Игровой никнейм *</label>
+                            <input type="text" id="nickname" name="nickname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="faceit">Faceit профиль</label>
+                            <input type="url" id="faceit" name="faceit" placeholder="https://faceit.com/ru/players/yournick">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Возраст *</label>
+                            <input type="number" id="age" name="age" min="16" max="35" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Предпочитаемая роль *</label>
+                            <select id="role" name="role" required>
+                                <option value="">Выберите роль</option>
+                                <option value="igl">IGL</option>
+                                <option value="awper">AWPer</option>
+                                <option value="rifler">Rifler</option>
+                                <option value="support">Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="experience">Опыт и достижения</label>
+                            <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о вашем опыте в CS2, участии в турнирах и т.д."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--large btn--accent">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <!-- Футер такой же как на главной -->
+    </footer>
+
+    <!-- Модальное окно для статистики -->
+    <div class="modal" id="stats-modal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <div id="stats-content">
+                <!-- Контент будет загружаться через JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="players.js"></script>
+</body>
+</html>

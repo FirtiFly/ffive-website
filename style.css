@@ -959,3 +959,511 @@ body {
     height: 2px;
     background: var(--color-accent);
 }
+/* ===== СТРАНИЦА ИГРОКОВ ===== */
+.players-page {
+    padding-top: 80px;
+}
+
+/* Фильтры игроков */
+.players-filters {
+    padding: 40px 0;
+}
+
+.filters__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filters-info h3 {
+    color: var(--color-text);
+    font-size: 1.2rem;
+}
+
+.filters-info span {
+    color: var(--color-accent);
+}
+
+.role-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Сетка игроков */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.player-profile-card {
+    background: var(--color-primary);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    position: relative;
+}
+
+.player-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-accent);
+}
+
+.player-card__header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.player-card__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+    margin: 0 auto 15px;
+}
+
+.player-card__badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge--captain {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #000;
+}
+
+.badge--level {
+    background: var(--color-accent);
+    color: white;
+}
+
+.badge--coach {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.player-card__info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-card__nickname {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.player-card__name {
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.player-card__role {
+    color: var(--color-success);
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 5px 12px;
+    background: rgba(0, 204, 102, 0.1);
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.player-card__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+.player-card__actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn--outline {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn--outline:hover {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Статистика команды */
+.team-stats {
+    padding: 80px 0;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stats-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stats-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.stats-card__value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.stats-card__label {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Академия */
+.academy {
+    padding: 80px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.academy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.academy-player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.academy-player:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.academy-player__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
+.academy-player__info h4 {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.academy-player__info p {
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.academy-player__level {
+    background: var(--color-accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.academy-cta {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.academy-cta p {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* Форма отбора */
+.tryout-section {
+    padding: 80px 0;
+}
+
+.tryout-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--color-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .filters__grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .role-filters {
+        justify-content: center;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .player-card__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .academy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .player-card__actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-card__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .stat-value {
+        font-size: 1rem;
+    }
+    
+    .role-filters {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+/* Добавляем в style.css */
+.player-stats-modal {
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.modal-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+}
+
+.modal-header h2 {
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.modal-header p {
+    color: var(--color-text-muted);
+}
+
+.modal-stats {
+    margin-bottom: 30px;
+}
+
+.modal-stats h3 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.stat-value {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.modal-bio {
+    margin-bottom: 30px;
+}
+
+.modal-bio h3 {
+    color: var(--color-text);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.modal-bio p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.modal-actions {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
