@@ -103,7 +103,6 @@
                             <a href="https://faceit.com/ru/players/PlayerNick1" target="_blank" class="btn btn--outline">Faceit</a>
                         </div>
                     </div>
-
                     <!-- Игрок 2 -->
                     <div class="player-profile-card" data-role="awper" data-player-id="2">
                         <div class="player-card__header">
@@ -137,9 +136,7 @@
                         </div>
                     </div>
 
-                    <!-- Добавьте остальных игроков по аналогии -->
-                    <!-- Игрок 3: Rifler -->
-                     <!-- Игрок 3 -->
+                    <!-- Игрок 3 -->
                     <div class="player-profile-card" data-role="rifler" data-player-id="3">
                         <div class="player-card__header">
                             <img src="images/players/player3.jpg" alt="PlayerNick3" class="player-card__avatar">
@@ -276,106 +273,29 @@
                 <div class="stats-cards">
                     <div class="stats-card">
                         <div class="stats-card__icon">🏆</div>
-                        <div class="stats-card__value">12</div>
+                        <div class="stats-card__value">0</div>
                         <div class="stats-card__label">Выигранных турниров</div>
                     </div>
                     <div class="stats-card">
                         <div class="stats-card__icon">⚔️</div>
-                        <div class="stats-card__value">245</div>
-                        <div class="stats-card__label">Сыгранных матчей</div>
+                        <div class="stats-card__value">0</div>
+                        <div class="stats-card__label">Сыгранных капт</div>
                     </div>
                     <div class="stats-card">
                         <div class="stats-card__icon">🎯</div>
-                        <div class="stats-card__value">1.38</div>
+                        <div class="stats-card__value">0</div>
                         <div class="stats-card__label">Средний K/D</div>
                     </div>
                     <div class="stats-card">
                         <div class="stats-card__icon">📈</div>
-                        <div class="stats-card__value">78%</div>
+                        <div class="stats-card__value">0</div>
                         <div class="stats-card__label">Win Rate</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Академия (молодежный состав) -->
-        <section class="academy section">
-            <div class="container">
-                <h2 class="section__title">Академия FFIVE</h2>
-                <p class="section-subtitle">Молодые таланты, которые готовятся к переходу в основной состав</p>
-                
-                <div class="academy-grid">
-                    <!-- Игрок академии 1 -->
-                    <div class="academy-player">
-                        <img src="images/players/academy1.jpg" alt="AcademyPlayer1" class="academy-player__avatar">
-                        <div class="academy-player__info">
-                            <h4>AcademyNick1</h4>
-                            <p>Начинающий rifler</p>
-                            <span class="academy-player__level">Уровень 8</span>
-                        </div>
-                    </div>
-
-                    <!-- Игрок академии 2 -->
-                    <div class="academy-player">
-                        <img src="images/players/academy2.jpg" alt="AcademyPlayer2" class="academy-player__avatar">
-                        <div class="academy-player__info">
-                            <h4>AcademyNick2</h4>
-                            <p>Перспективный AWPer</p>
-                            <span class="academy-player__level">Уровень 9</span>
-                        </div>
-                    </div>
-
-                    <!-- Добавьте больше игроков академии -->
-                </div>
-
-                <div class="academy-cta">
-                    <p>Хочешь попасть в нашу академию?</p>
-                    <a href="#tryout" class="btn btn--accent">Подать заявку</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Форма подачи заявки -->
-        <section id="tryout" class="tryout-section section section--dark">
-            <div class="container">
-                <h2 class="section__title">Попробуй силы</h2>
-                <p class="section-subtitle">Заполни форму для участия в отборе</p>
-                
-                <form class="tryout-form">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="nickname">Игровой никнейм *</label>
-                            <input type="text" id="nickname" name="nickname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="faceit">Faceit профиль</label>
-                            <input type="url" id="faceit" name="faceit" placeholder="https://faceit.com/ru/players/yournick">
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Возраст *</label>
-                            <input type="number" id="age" name="age" min="16" max="35" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Предпочитаемая роль *</label>
-                            <select id="role" name="role" required>
-                                <option value="">Выберите роль</option>
-                                <option value="igl">IGL</option>
-                                <option value="awper">AWPer</option>
-                                <option value="rifler">Rifler</option>
-                                <option value="support">Support</option>
-                            </select>
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="experience">Опыт и достижения</label>
-                            <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о вашем опыте в CS2, участии в турнирах и т.д."></textarea>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--large btn--accent">Отправить заявку</button>
-                </form>
-            </div>
-        </section>
-    </main>
+        
 
     <footer id="contact" class="footer">
         <!-- Футер такой же как на главной -->
