@@ -1,0 +1,590 @@
+/* style.css */
+:root {
+    /* Цветовая палитра бренда FFIVE - замените на свои цвета! */
+    --color-primary: #0a0a0a;       /* Основной темный фон */
+    --color-secondary: #141414;     /* Вторичный темный фон */
+    --color-accent: #ff0000;        /* Акцентный цвет (например, красный) */
+    --color-text: #ffffff;          /* Основной текст */
+    --color-text-muted: #b0b0b0;    /* Второстепенный текст */
+
+    /* Дополнительные цвета */
+    --color-success: #00cc66;       /* Для побед, позитива */
+    --color-warning: #ff9900;       /* Для предупреждений */
+
+    /* Типографика */
+    --font-main: 'Inter', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Прочее */
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Сброс стандартных отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-primary);
+}
+
+/* Контейнер для центрирования контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+.section--dark {
+    background-color: var(--color-secondary);
+}
+.section__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+.btn--accent {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+.btn--accent:hover {
+    background-color: transparent;
+    color: var(--color-text);
+}
+.btn--large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95); /* Полупрозрачный фон */
+    backdrop-filter: blur(10px); /* Размытие под шапкой */
+    z-index: 1000;
+    padding: 15px 0;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo__img {
+    height: 40px; /* Настройте под свой логотип */
+    width: auto;
+}
+.nav {
+    display: flex;
+    gap: 30px;
+}
+.nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.nav__link:hover {
+    color: var(--color-accent);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') no-repeat center center / cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Чтобы учесть высоту фиксированного хедера */
+}
+.hero__title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.hero__title span {
+    color: var(--color-accent);
+}
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ===== ROSTER SECTION ===== */
+.roster__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.player-card {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.player-card__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--color-accent);
+}
+.player-card__nickname {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+.player-card__name {
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+}
+.player-card__role {
+    font-style: italic;
+}
+
+/* ===== SCHEDULE SECTION ===== */
+.schedule__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.match {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.match__date {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+.match__teams {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.match__team--ffive {
+    font-weight: 700;
+    color: var(--color-accent);
+}
+.match__vs {
+    color: var(--color-text-muted);
+}
+.match__tournament {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+.match__watch {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.match__watch:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER SOCIAL BUTTONS ===== */
+.footer__social {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.footer__title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    font-weight: 500;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn--tg {
+    background: linear-gradient(135deg, #0088cc, #00a2e4);
+    color: white;
+}
+
+.social-btn--tg:hover {
+    background: linear-gradient(135deg, #00a2e4, #0088cc);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn--yt {
+    background: linear-gradient(135deg, #ff0000, #ff4d4d);
+    color: white;
+}
+
+.social-btn--yt:hover {
+    background: linear-gradient(135deg, #ff4d4d, #ff0000);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn--twitch {
+    background: linear-gradient(135deg, #9146ff, #a970ff);
+    color: white;
+}
+
+.social-btn--twitch:hover {
+    background: linear-gradient(135deg, #a970ff, #9146ff);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.social-text {
+    font-weight: 600;
+}
+
+/* Адаптивность для соцкнопок */
+@media (max-width: 768px) {
+    .social-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        min-width: 200px;
+        justify-content: center;
+    }
+}
+
+/* Дополнительные стили для футера */
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.footer__logo {
+    text-align: center;
+}
+
+.footer__tagline {
+    color: var(--color-text-muted);
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer__contact {
+    text-align: right;
+}
+
+.footer__email {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer__email:hover {
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Адаптивность футера */
+@media (max-width: 968px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer__contact {
+        text-align: center;
+    }
+}
+.footer__social .social-grid .social-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    transform: none !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .header__inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+    .match {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.news-card {
+    background: var(--color-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.news-card__image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-card__image img {
+    transform: scale(1.05);
+}
+
+.news-card__date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.news-card__content {
+    padding: 25px;
+}
+
+.news-card__title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.news-card__excerpt {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.news-card__link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.news-card__link:hover {
+    transform: translateX(5px);
+}
+
+.news__footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ===== SHOP SECTION ===== */
+.shop__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.shop__text {
+    padding-right: 30px;
+}
+
+.shop__description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--color-text-muted);
+}
+
+.shop__features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.shop__feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.shop__feature span {
+    font-size: 1.2rem;
+}
+
+.shop__image {
+    position: relative;
+}
+
+.shop__preview {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.shop__preview:hover {
+    transform: scale(1.02);
+}
+
+/* Адаптивность для магазина */
+@media (max-width: 968px) {
+    .shop__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .shop__text {
+        padding-right: 0;
+        order: 2;
+    }
+    
+    .shop__image {
+        order: 1;
+    }
+    
+    .shop__features {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .news__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card__image {
+        height: 180px;
+    }
+}
+
+/* Анимация появления элементов */
+.news-card,
+.shop__content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.news-card.visible,
+.shop__content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
