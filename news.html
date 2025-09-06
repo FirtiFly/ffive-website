@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - FFIVE Esports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Логотип FFIVE" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <a href="index.html#about" class="nav__link">О нас</a>
+                    <a href="index.html#roster" class="nav__link">Состав</a>
+                    <a href="index.html#schedule" class="nav__link">Расписание</a>
+                    <a href="news.html" class="nav__link nav__link--active">Новости</a>
+                    <a href="index.html#media" class="nav__link">Медиа</a>
+                    <a href="index.html#shop" class="nav__link">Магазин</a>
+                    <a href="index.html#contact" class="nav__link">Контакты</a>
+                </nav>
+                <a href="https://ffive-store.ru" target="_blank" class="btn btn--accent">Мерч</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="news-page">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="index.html">Главная</a> / <span>Новости</span>
+            </div>
+        </div>
+
+        <!-- Заголовок страницы -->
+        <section class="page-header section">
+            <div class="container">
+                <h1 class="page-title">Новости команды</h1>
+                <p class="page-subtitle">Все самые свежие события и анонсы FFIVE Esports</p>
+            </div>
+        </section>
+
+        <!-- Фильтры и поиск -->
+        <section class="news-filters section section--dark">
+            <div class="container">
+                <div class="filters__grid">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск новостей..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">Все</button>
+                        <button class="filter-btn" data-category="tournaments">Турниры</button>
+                        <button class="filter-btn" data-category="roster">Состав</button>
+                        <button class="filter-btn" data-category="sponsors">Спонсоры</button>
+                        <button class="filter-btn" data-category="updates">Обновления</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сетка новостей -->
+        <section class="news-grid-section section">
+            <div class="container">
+                <div class="news-grid" id="news-grid">
+                    <!-- Новость 1 -->
+                    <article class="news-article" data-category="tournaments" data-date="2024-09-15">
+                        <div class="article__image">
+                            <img src="images/news/tournament-win.jpg" alt="Победа в турнире">
+                            <div class="article__date">15.09.2024</div>
+                            <span class="article__category">Турниры</span>
+                        </div>
+                        <div class="article__content">
+                            <h2 class="article__title">FFIVE одерживает победу на чемпионате ESL Open</h2>
+                            <p class="article__excerpt">Наша команда показала выдающуюся игру и забрала первый крупный трофей сезона в напряженном финале против Team Liquid.</p>
+                            <div class="article__meta">
+                                <span class="article__author">Автор: Алексей Иванов</span>
+                                <span class="article__read-time">5 мин чтения</span>
+                            </div>
+                            <a href="news-single.html?id=1" class="article__link">Читать полностью →</a>
+                        </div>
+                    </article>
+
+                    <!-- Новость 2 -->
+                    <article class="news-article" data-category="sponsors" data-date="2024-09-10">
+                        <div class="article__image">
+                            <img src="images/news/new-sponsor.jpg" alt="Новый спонсор">
+                            <div class="article__date">10.09.2024</div>
+                            <span class="article__category">Спонсоры</span>
+                        </div>
+                        <div class="article__content">
+                            <h2 class="article__title">Новый спонсор - TechCorp</h2>
+                            <p class="article__excerpt">Рады объявить о начале партнерства с ведущим производителем игрового оборудования. TechCorp будет обеспечивать команду...</p>
+                            <div class="article__meta">
+                                <span class="article__author">Автор: Мария Петрова</span>
+                                <span class="article__read-time">3 мин чтения</span>
+                            </div>
+                            <a href="news-single.html?id=2" class="article__link">Читать полностью →</a>
+                        </div>
+                    </article>
+
+                    <!-- Новость 3 -->
+                    <article class="news-article" data-category="roster" data-date="2024-09-05">
+                        <div class="article__image">
+                            <img src="images/news/roster-change.jpg" alt="Изменение в составе">
+                            <div class="article__date">05.09.2024</div>
+                            <span class="article__category">Состав</span>
+                        </div>
+                        <div class="article__content">
+                            <h2 class="article__title">Обновление в основном составе</h2>
+                            <p class="article__excerpt">Произошли изменения в основном составе команды. Встречайте нашего нового снайпера - Александр "S1mple" Костюкевич присоединяется к FFIVE!</p>
+                            <div class="article__meta">
+                                <span class="article__author">Автор: Дмитрий Смирнов</span>
+                                <span class="article__read-time">7 мин чтения</span>
+                            </div>
+                            <a href="news-single.html?id=3" class="article__link">Читать полностью →</a>
+                        </div>
+                    </article>
+
+                    <!-- Добавьте больше новостей по аналогии -->
+                </div>
+
+                <!-- Пагинация -->
+                <div class="pagination">
+                    <button class="pagination__btn pagination__btn--prev" disabled>← Назад</button>
+                    <div class="pagination__pages">
+                        <button class="pagination__page active">1</button>
+                        <button class="pagination__page">2</button>
+                        <button class="pagination__page">3</button>
+                        <span class="pagination__dots">...</span>
+                        <button class="pagination__page">10</button>
+                    </div>
+                    <button class="pagination__btn pagination__btn--next">Вперед →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подписка на новости -->
+        <section class="newsletter section section--dark">
+            <div class="container">
+                <div class="newsletter__content">
+                    <h2>Не пропустите новости</h2>
+                    <p>Подпишитесь на рассылку и получайте уведомления о новых статьях</p>
+                    <form class="newsletter__form">
+                        <input type="email" placeholder="Ваш email" required class="newsletter__input">
+                        <button type="submit" class="btn btn--accent">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <!-- Футер такой же как на главной -->
+    </footer>
+
+    <script src="news.js"></script>
+</body>
+</html>
