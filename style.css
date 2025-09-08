@@ -1467,3 +1467,188 @@ body {
         text-align: center;
     }
 }
+/* ===== СТРАНИЦА МЕРЧА ===== */
+.merch-page {
+    padding-top: 80px;
+}
+
+/* Сетка товаров */
+.merch-grid-section {
+    padding: 60px 0;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.merch-card {
+    background: var(--color-primary);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.merch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-accent);
+}
+
+.merch-card__image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.merch-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.merch-card:hover .merch-image {
+    transform: scale(1.05);
+}
+
+.merch-card__badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.merch-card__content {
+    padding: 20px;
+}
+
+.merch-card__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.merch-card__description {
+    color: var(--color-text-muted);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.merch-card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.merch-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.merch-sizes {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.merch-card__actions {
+    margin-top: 15px;
+}
+
+.btn--fullwidth {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Информация о доставке */
+.delivery-info {
+    padding: 80px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-accent);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.info-card p {
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .merch-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .merch-card__image {
+        height: 200px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .merch-card__details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .merch-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .merch-card__content {
+        padding: 15px;
+    }
+    
+    .merch-price {
+        font-size: 1.2rem;
+    }
+}

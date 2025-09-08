@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Официальный мерч - FFIVE Esports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Логотип FFIVE" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <a href="index.html#about" class="nav__link">О нас</a>
+                    <a href="players.html" class="nav__link">Состав</a>
+                    <a href="index.html#schedule" class="nav__link">Расписание</a>
+                    <a href="news.html" class="nav__link">Новости</a>
+                    <a href="merch.html" class="nav__link nav__link--active">Магазин</a>
+                    <a href="index.html#contact" class="nav__link">Контакты</a>
+                </nav>
+                <a href="merch.html" class="btn btn--accent">Мерч</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="merch-page">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="index.html">Главная</a> / <span>Магазин мерча</span>
+            </div>
+        </div>
+
+        <!-- Заголовок страницы -->
+        <section class="page-header section">
+            <div class="container">
+                <h1 class="page-title">Официальный мерч FFIVE</h1>
+                <p class="page-subtitle">Поддержи команду и выгляди стильно! Качественная продукция с символикой FFIVE Esports</p>
+            </div>
+        </section>
+
+        <!-- Фильтры товаров -->
+        <section class="merch-filters section section--dark">
+            <div class="container">
+                <div class="filters__grid">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск мерча..." class="search-input" id="merch-search">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">Все товары</button>
+                        <button class="filter-btn" data-category="t-shirts">Футболки</button>
+                        <button class="filter-btn" data-category="hoodies">Худи</button>
+                        <button class="filter-btn" data-category="jerseys">Джерси</button>
+                        <button class="filter-btn" data-category="accessories">Аксессуары</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сетка товаров -->
+        <section class="merch-grid-section section">
+            <div class="container">
+                <div class="merch-grid" id="merch-grid">
+                    <!-- Футболка 1 -->
+                    <div class="merch-card" data-category="t-shirts" data-price="1999">
+                        <div class="merch-card__image">
+                            <img src="images/merch/tshirt-black.jpg" alt="Футболка FFIVE черная" class="merch-image">
+                            <div class="merch-card__badge">Хит продаж</div>
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Футболка FFIVE Black</h3>
+                            <p class="merch-card__description">Черная футболка с логотипом команды. 100% хлопок.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">1 999 ₽</span>
+                                <span class="merch-sizes">S-XXL</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345678/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Футболка 2 -->
+                    <div class="merch-card" data-category="t-shirts" data-price="1999">
+                        <div class="merch-card__image">
+                            <img src="images/merch/tshirt-white.jpg" alt="Футболка FFIVE белая" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Футболка FFIVE White</h3>
+                            <p class="merch-card__description">Белая футболка с контрастным принтом. Премиум качество.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">1 999 ₽</span>
+                                <span class="merch-sizes">S-XXL</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345679/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Худи -->
+                    <div class="merch-card" data-category="hoodies" data-price="3999">
+                        <div class="merch-card__image">
+                            <img src="images/merch/hoodie-black.jpg" alt="Худи FFIVE черное" class="merch-image">
+                            <div class="merch-card__badge">Новинка</div>
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Худи FFIVE Premium</h3>
+                            <p class="merch-card__description">Теплое худи с капюшоном. Идеально для стримов.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">3 999 ₽</span>
+                                <span class="merch-sizes">M-XXL</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345680/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Джерси -->
+                    <div class="merch-card" data-category="jerseys" data-price="4999">
+                        <div class="merch-card__image">
+                            <img src="images/merch/jersey.jpg" alt="Джерси FFIVE" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Джерси игровое</h3>
+                            <p class="merch-card__description">Официальное игровое джерси команды. Как у профессионалов.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">4 999 ₽</span>
+                                <span class="merch-sizes">S-XXL</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345681/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кепка -->
+                    <div class="merch-card" data-category="accessories" data-price="999">
+                        <div class="merch-card__image">
+                            <img src="images/merch/cap.jpg" alt="Кепка FFIVE" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Бейсболка FFIVE</h3>
+                            <p class="merch-card__description">Стильная бейсболка с вышитым логотипом. Регулируемый размер.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">999 ₽</span>
+                                <span class="merch-sizes">Универсальная</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345682/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Флаг -->
+                    <div class="merch-card" data-category="accessories" data-price="799">
+                        <div class="merch-card__image">
+                            <img src="images/merch/flag.jpg" alt="Флаг FFIVE" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Флаг команды</h3>
+                            <p class="merch-card__description">Флаг FFIVE для украшения игровой зоны или турниров.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">799 ₽</span>
+                                <span class="merch-sizes">90x150 см</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345683/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кружка -->
+                    <div class="merch-card" data-category="accessories" data-price="599">
+                        <div class="merch-card__image">
+                            <img src="images/merch/mug.jpg" alt="Кружка FFIVE" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Кружка керамическая</h3>
+                            <p class="merch-card__description">Кружка с логотипом для горячих напитков. Объем 350 мл.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">599 ₽</span>
+                                <span class="merch-sizes">350 мл</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345684/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Наклейки -->
+                    <div class="merch-card" data-category="accessories" data-price="299">
+                        <div class="merch-card__image">
+                            <img src="images/merch/stickers.jpg" alt="Наклейки FFIVE" class="merch-image">
+                        </div>
+                        <div class="merch-card__content">
+                            <h3 class="merch-card__title">Набор наклеек</h3>
+                            <p class="merch-card__description">Набор из 10 виниловых наклеек с дизайном команды.</p>
+                            <div class="merch-card__details">
+                                <span class="merch-price">299 ₽</span>
+                                <span class="merch-sizes">Набор 10 шт</span>
+                            </div>
+                            <div class="merch-card__actions">
+                                <a href="https://www.wildberries.ru/catalog/12345685/detail.aspx" target="_blank" class="btn btn--accent btn--fullwidth">
+                                    Заказать на Wildberries
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Информация о доставке -->
+        <section class="delivery-info section section--dark">
+            <div class="container">
+                <h2 class="section__title">Доставка и оплата</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🚚</div>
+                        <h3>Быстрая доставка</h3>
+                        <p>Доставка по всей России от 1 дня через Wildberries</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💳</div>
+                        <h3>Любой способ оплаты</h3>
+                        <p>Наличные, карты, электронные кошельки</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">↩️</div>
+                        <h3>Легкий возврат</h3>
+                        <p>Возврат в течение 14 дней без вопросов</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🎁</div>
+                        <h3>Оригинальная продукция</h3>
+                        <p>Официальный мерч с гарантией качества</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="images/logo.png" alt="FFIVE Logo" class="logo__img">
+                    <p class="footer__tagline">Киберспортивная организация по CS2</p>
+                </div>
+
+                <div class="footer__social">
+                    <h3 class="footer__title">Подписывайтесь на нас</h3>
+                    <div class="social-grid">
+                        <a href="https://t.me/TeamFFIVE" target="_blank" class="social-btn social-btn--tg">
+                            <span class="social-text">Telegram</span>
+                        </a>
+                        <a href="https://youtube.com/@ffive-org?si=urPTbjs-uHGj78Td" target="_blank" class="social-btn social-btn--yt">
+                            <span class="social-text">YouTube</span>
+                        </a>
+                        <a href="https://twitch.tv/ffive_org" target="_blank" class="social-btn social-btn--twitch">
+                            <span class="social-text">Twitch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__contact">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p>По вопросам сотрудничества:</p>
+                    <a href="mailto:ffiveesports@gmail.com" class="footer__email">ffiveesports@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 FFIVE Esports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="merch.js"></script>
+</body>
+</html>
